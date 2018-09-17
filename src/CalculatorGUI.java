@@ -146,12 +146,11 @@ public class CalculatorGUI extends JFrame {
 	private void calcHigher() {
 		double x = Double.parseDouble(in1.getText());
 		double y = Double.parseDouble(in2.getText());
-		
-		double higherNum = x - y;
-		if (higherNum < 0) {
-			higherNum = y;
-		} else {
+		double higherNum;
+		if (x > y) {
 			higherNum = x;
+		} else {
+			higherNum = y;
 		}
 		
 		answer.setText("Higher number is: " + higherNum);
